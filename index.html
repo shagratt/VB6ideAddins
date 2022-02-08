@@ -23,7 +23,6 @@
         /* color:#FFF; */
         /* text-align: center; */
         overflow-x: hidden;
-        /* font-family: sans-serif; */
         font-family: Consolas, 'Courier New', Courier, monospace;
         max-width: 1000px;
         margin-left: auto;
@@ -31,26 +30,29 @@
     }
     .red { color: red; }
     .addin { color: #efff00; }
-    .boxred { border: 4px solid red; width: fit-content; padding: 2em; margin: auto;}
+    .boxred { border: 4px solid red; width: fit-content; padding: 2em; margin: auto; background-color: darkblue;}
     .p { padding-left: 2em; }
     a { color: cyan;}
     .img { vertical-align: middle; }
-    #screens { text-align: center; margin-top: 4em; }
+    .img2 { vertical-align: middle; max-width: 540px;max-height: 400px;}
+    .screens { text-align: center; margin: 2em 0em; }
+    .addinbox { overflow: auto; margin-top: 1em;}
+    .addinbox div:nth-child(1) { float: left; max-width: 450px;}
+    .addinbox div:nth-child(2) { float: right;}
 </style>
 
 <body>
     <div id="container">
 =================================================================================================<BR>
- Shagratt's IDE collection v1.0<BR>
+&nbsp;Shagratt's IDE collection v1.0<BR>
 =================================================================================================<BR>
 <BR>
 <BR>
-I'm releasing all my work on VB6 IDE Addins as a collection. I dont have plans to keep working<BR>
-on them in the near future so they are unsupported (I use all of them daily so they are stable)<BR>
-AddIns included are updated and unreleased versions.<BR> 
-<BR>
-<BR>
-
+I dont have plans to keep working on them so I'm releasing all my work on VB6 IDE Addins as a collection. <BR>
+They are all stable and I use all of them daily for my projects.<BR>
+AddIns included are updated and unreleased versions. If you have any previous version installed, unregister and register/compile the newer ones.<BR> 
+<BR>       
+<BR>       
 <div class="boxred">
 <span class="red">IMPORTANT!!!:</span> Rename DATAVIEW.DLL to DATAVIEW.BAK in VB6.EXE folder to disable it<BR> 
 	      This file is causing problems with disapearing icons because its bad coded and dont<BR> 
@@ -66,38 +68,71 @@ Here is a short description of each one (for full documentation check the "_Read
 project folder inside "sources\")<BR>
 <BR>
 <BR>
-<span class="addin">Document Map (v2.2):</span><BR>
-	-A graphical representation of the code. Allow to faster movement in the code<BR>
-	-Add the ability to have 3 permanent type of bookmarks and division lines in the code<BR>
-	-Highlight the selected word in the document map<BR>
-	-Allow zoom for bigger projects<BR>
-<BR>
-<span class="addin">CodeFold (v1.1):</span><BR>
-	-Add codefolding of functions/subs to VB6 IDE<BR>
-<BR>
-<span class="addin">Comment Display+Highlight+Hotkeys (v1.2):</span><BR>
-	-Display comments lines above a functions/sub/vars or typelibs matching selection<BR>
-	-Can show code of function/subs on floating windows<BR>
-	-Highlight selection matches on all code editor<BR>
-	-Add extra hotkeys:<BR>
-<div class="p">
-	   CTRL+Q: Smart lines comment / uncomment<BR>
-	   CTRL+D: Duplicate Lines<BR>
-	   CTRL+SHIFT+UP and CTRL+SHIFT+DOWN: Move Up or Down selected lines<BR>
-</div>        
-<BR>
-<span class="addin">Fix Palette Button Mod (v1.3):</span><BR>
-	-Add a button to open a floating color selector/picker<BR>
-	-Can generate gradients and secondary color to compare<BR>
-	-Can see color applied instantly<BR>
- 	 (Based on the project FixPalette by Leandro Ascierto.Does not replace it! You can use both)<BR> 
-<BR>	
-<span class="addin">Resizer (v1.0):</span><BR>
-	-Add a button to open a form resizer screen.<BR>
-	-Pick a control on the form, then choose how it will resize/move when screen resize<BR>
-	 (No more coded needed in Form_Resize event, its all GUI based)<BR>
-	-Has a button to automatically add "ControlResizer.cls" to project if needed and the code<BR>
-	 for it on the form to use it. This file must be in the same folder as "ResizerAddIn.dll"<BR>
+<div class="addinbox">
+    <div>
+    <span class="addin">Document Map (v2.2):</span><BR><BR>
+        -A graphical representation of the code. Use it to quickly navigate through the code and keep track of your location in it<BR>
+        -Add the ability to have 3 permanent type of bookmarks and division lines<BR>
+        -Highlight the selected word in the document map<BR>
+        -Highlight entire procedure length in the document map (only when moving on it)<BR>
+        -Allow zoom for bigger projects
+    </div>
+    <div class="screens">
+        <img id="titimg" src="img/Document_map_v2.0b.png" class="img" style="max-width: 540px;">
+    </div>
+</div>
+<div class="addinbox">
+    <div>
+    <span class="addin">Comment Display+Highlight+Hotkeys (v1.2):</span><BR><BR>
+        -Display comments lines above a functions/sub/vars or typelibs matching selection<BR>
+        -Can show code of function/subs on floating windows<BR>
+        -Highlight selection matches on all code editor<BR>
+        -Add extra hotkeys:<BR>
+        <div class="p">
+            CTRL+Q: Smart lines comment / uncomment<BR>
+            CTRL+D: Duplicate Lines<BR>
+            CTRL+SHIFT+UP and CTRL+SHIFT+DOWN: Move Up or Down selected lines<BR>
+        </div>        
+    </div>
+    <div class="screens">
+        <img id="titimg" src="img/Snap_CCHH_1.png" class="img2">
+    </div>
+</div>    
+<div class="addinbox">
+    <div>
+    <span class="addin">CodeFold (v1.1):</span><BR><BR>
+	-Add codefolding of functions/subs to VB6 IDE
+    </div>
+    <div class="screens">
+        <img id="titimg" src="img/Snap_CodeFold_2.gif" class="img2">
+    </div>
+</div>    
+<div class="addinbox">
+    <div style="max-width: 600px;">
+    <span class="addin">Fix Palette Button Mod (v1.3):</span><BR><BR>
+        -Add a button to open a floating color selector/picker<BR>
+        -Can generate gradients and secondary color to compare<BR>
+        -Can see color applied instantly<BR>
+        (Based on the project FixPalette by Leandro Ascierto.Does not replace it! You can use both)<BR> 
+    </div>	
+    <div class="screens">
+        <img id="titimg" src="img/FixPaletteBtnMod.png" class="img2">
+    </div>
+</div>   
+<div class="addinbox">
+    <div style="max-width: 600px;"> 
+    <span class="addin">Resizer (v1.0):</span><BR><BR>
+        -Add a button to open a form resizer screen.<BR>
+        -Pick a control on the form, then choose how it will resize/move when screen resize<BR>
+        (You dont need to add code in Form_Resize event, its all GUI based)<BR>
+        -Has a button to automatically add "ControlResizer.cls" to project if needed and the code 
+        for it on the form to use it. This file must be in the same folder as "ResizerAddIn.dll"<BR>
+    </div>	
+    <div class="screens">
+        <img id="titimg" src="img/Resizer.png" class="img2" >
+    </div>
+</div>   
+            
 <BR>
 <BR>
 I added all the compiled dlls with a "_register.bat" for convenience in the "compiled dlls" directory<BR>
@@ -109,7 +144,7 @@ but you can recreate all from the sources project if you want.<BR>
 <BR>
 <BR>
 </div>
-<div id="screens">
+<div class="screens">
     <img id="titimg" src="img/Document_map_v2.0b.png" class="img" style="max-width: 540px;">
     <img id="titimg" src="img/Document_map_v2.0a.png" class="img" style="max-width: 500px;">
     <img id="titimg" src="img/Snap_CCHH_1.png" class="img" style="max-width: 540px;">
