@@ -10,6 +10,7 @@
 </head>
 
 <style>
+    * { font-family: Consolas, 'Courier New', Courier, monospace; }
     body {
         margin: 0;
         background-color:#a5a5ff;
@@ -24,7 +25,6 @@
         /* color:#FFF; */
         /* text-align: center; */
         overflow-x: hidden;
-        font-family: Consolas, 'Courier New', Courier, monospace;
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -38,7 +38,7 @@
     .img { vertical-align: middle; }
     .img2 { vertical-align: middle; /* max-width: 540px */ ;max-height: 400px; }
     .screens { text-align: center; margin: 2em 0em; }
-    .addinbox { overflow: auto; margin-top: 1em;}
+    .addinbox { overflow: auto; margin-top: 1em;margin-bottom: 2em;}
     .addinbox div:nth-child(1) { float: left; max-width: 450px;}
     .addinbox div:nth-child(2) { float: right;}
     #page {display: none;}
@@ -89,6 +89,10 @@ project folder inside "sources\")<BR>
     <div class="screens">
         <img id="titimg" src="img/Document_map_v2.0b.png" class="img" style="max-width: 540px; ">
     </div>
+    <div>
+    <iframe width="560" height="315" style="float:left;" src="https://www.youtube.com/embed/g4ZBHm-nw1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div style="float: left;width: 405px;margin-top: 260px;margin-left: 1em;">Sorry for bad Video capturing quality (low fps) Document map is smooth and dont lag</div>
+    </div>
 </div>
 <div class="addinbox">
     <div>
@@ -106,6 +110,7 @@ project folder inside "sources\")<BR>
     <div class="screens">
         <img id="titimg" src="img/Snap_CCHH_1.png" class="img2">
     </div>
+    <iframe width="330" height="465" style="margin-top: 2em;" src="https://www.youtube.com/embed/1OAooDeXJak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>    
 <div class="addinbox">
     <div>
@@ -115,6 +120,8 @@ project folder inside "sources\")<BR>
     <div class="screens">
         <img id="titimg" src="img/Snap_CodeFold_2.gif" class="img2">
     </div>
+    <iframe width="520" height="360" style="margin-top: 2em;" src="http://www.youtube.com/embed/GPiF1aS6AyA" frameborder=0 allowfullscreen></iframe>
+
 </div>    
 <div class="addinbox">
     <div style="max-width: 600px;">
@@ -155,6 +162,7 @@ but you can recreate all from the sources project if you want.<BR>
 </div>    
 </div>
 <div id="morescreens" class="screens" style="display: none;">
+    More screenshots<BR><BR>
     <img id="titimg" src="img/Document_map_v2.0b.png" class="img" style="max-width: 540px;">
     <img id="titimg" src="img/Document_map_v2.0a.png" class="img" style="max-width: 500px;">
     <img id="titimg" src="img/Snap_CCHH_1.png" class="img" style="max-width: 540px;">
@@ -174,7 +182,7 @@ function c64bkg(){
     var o = document.getElementById('page');
     o.style.display = "block";
     var o = document.getElementById('morescreens');
-    // o.style.display = "block";
+    o.style.display = "block";
     document.body.style.backgroundImage = 'url("")';
 }
 </script>
